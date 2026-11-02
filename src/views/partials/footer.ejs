@@ -1,7 +1,29 @@
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>&copy; <%= new Date().getFullYear() %> CSE 340 Service Network.</p>
-      <p>Connecting people with meaningful ways to serve.</p>
+    <div class="container footer-main">
+      <div>
+        <div class="footer-brand"><span class="brand-mark" aria-hidden="true">SN</span> Service Network</div>
+        <p class="footer-about">Connecting people with meaningful ways to serve, and with the organizations making a difference in their communities.</p>
+      </div>
+      <nav aria-label="Explore">
+        <h2>Explore</h2>
+        <ul class="footer-links">
+          <li><a href="/projects">Projects</a></li>
+          <li><a href="/organizations">Organizations</a></li>
+          <li><a href="/categories">Categories</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Site">
+        <h2>Site</h2>
+        <ul class="footer-links">
+          <li><a href="/">Home</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; <%= new Date().getFullYear() %> CSE 340 Service Network. All rights reserved.</p>
+        <p>Built for the CSE 340 course.</p>
+      </div>
     </div>
   </footer>
 </body>
