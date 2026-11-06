@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" role="img" aria-labelledby="t d">
+<title id="t">Community volunteers</title><desc id="d">A team of volunteers working together to support their neighborhood.</desc>
+<defs><linearGradient id="bg" x2="0" y2="1"><stop stop-color="#e6f0e9"/><stop offset="1" stop-color="#c0d8c8"/></linearGradient></defs>
+<rect width="1200" height="750" fill="url(#bg)"/><circle cx="1020" cy="120" r="62" fill="#f5d891"/>
+<!-- simple neighborhood -->
+<path d="M0 430 L190 270 L380 430 V640 H0Z" fill="#d9a36d"/><path d="M145 310 L190 270 L235 310" fill="none" stroke="#a86c47" stroke-width="24"/><rect x="65" y="455" width="95" height="185" fill="#f5e9d8"/><rect x="215" y="465" width="100" height="85" fill="#8bb6bf"/>
+<path d="M850 430 L1020 290 L1190 430 V650 H850Z" fill="#e5bd82"/><rect x="920" y="465" width="90" height="175" fill="#f5ead8"/><rect x="1050" y="460" width="95" height="85" fill="#8bb6bf"/>
+<path d="M0 610 Q300 550 600 610 T1200 600 V750 H0Z" fill="#6d9d70"/>
+<!-- people -->
+<circle cx="390" cy="285" r="58" fill="#8d5b43"/><path d="M330 280 Q340 210 410 220 Q450 230 450 290 Q390 260 330 280" fill="#2d302d"/><path d="M320 365 Q390 325 460 370 L495 590 H285Z" fill="#e1a24b"/>
+<circle cx="600" cy="255" r="62" fill="#bd805b"/><path d="M540 250 Q550 175 625 190 Q670 200 665 265 Q605 225 540 250" fill="#3b302a"/><path d="M525 345 Q600 300 675 350 L710 585 H490Z" fill="#4f8a79"/>
+<circle cx="805" cy="300" r="56" fill="#69412f"/><path d="M750 295 Q755 225 820 240 Q865 250 860 310 Q810 270 750 295" fill="#202e2b"/><path d="M735 375 Q805 335 875 380 L910 590 H700Z" fill="#d8755a"/>
+<!-- shared box -->
+<rect x="480" y="500" width="245" height="105" rx="12" fill="#b77a48"/><path d="M480 535 H725" stroke="#e5bd82" stroke-width="12"/><path d="M600 500 V605" stroke="#e5bd82" stroke-width="10"/>
+</svg>
