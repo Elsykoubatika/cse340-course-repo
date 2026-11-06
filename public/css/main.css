@@ -328,7 +328,7 @@ p { margin: 0 0 1em; }
 .category-educational   { --accent: var(--cat-educational); }
 .category-community     { --accent: var(--cat-community); }
 .category-health        { --accent: var(--cat-health); }
-.category-card .card-media { aspect-ratio: 16 / 7; }
+.category-card .card-media { aspect-ratio: 16 / 9; }
 .category-card-content { position: relative; flex: 1; padding: 0 30px 30px; }
 .category-icon {
   position: relative; z-index: 2;
