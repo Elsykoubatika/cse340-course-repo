@@ -54,6 +54,7 @@ app.use((req, res) => {
 // console.log(`CSE 340 Service Network running at http://localhost:${port}`);
 //});
 const PORT = process.env.PORT || 5500;
+const NODE_ENV = process.env.NODE_ENV || 'development';
 app.listen(PORT, async () => {
     try {
         await testConnection();
