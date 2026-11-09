@@ -1,7 +1,11 @@
 import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import dotenv from 'dotenv';
+
+import dotenv from 'dotenv' ;
+dotenv.config();
+
+import { testConnection } from './src/models/db.js';
 
 dotenv.config();
 
@@ -9,6 +13,7 @@ const app = express();
 const port = process.env.PORT || 5500;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+
 
 // Middleware and view engine configuration
 app.use(express.static(path.join(__dirname, 'public')));
@@ -45,6 +50,17 @@ app.use((req, res) => {
   res.status(404).render('404', { title });
 });
 
-app.listen(port, () => {
-  console.log(`CSE 340 Service Network running at http://localhost:${port}`);
+//app.listen(port, () => {
+// console.log(`CSE 340 Service Network running at http://localhost:${port}`);
+//});
+const PORT = process.env.PORT || 5500;
+app.listen(PORT, async () => {
+    try {
+        await testConnection();
+
+        console.log(`CSE 340 Service Network running at http://localhost:${port}`);
+        console.log(`Environment: ${NODE_ENV}`);
+    } catch (error) {
+        console.error('Error connecting to the database:', error);
+    }
 });
