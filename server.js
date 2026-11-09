@@ -1,7 +1,7 @@
 import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
-
+import { getAllOrganizations } from './src/models/organizations.js';
 import dotenv from 'dotenv' ;
 dotenv.config();
 
@@ -64,4 +64,12 @@ app.listen(PORT, async () => {
     } catch (error) {
         console.error('Error connecting to the database:', error);
     }
+});
+
+app.get('/organizations', async (req, res) => {
+    const organizations = await getAllOrganizations();
+    console.log(organizations);
+      
+    const title = 'Our Partner Organizations';
+    res.render('organizations', { title });
 });
