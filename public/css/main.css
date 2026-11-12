@@ -299,15 +299,6 @@ p { margin: 0 0 1em; }
 .organization-card h2, .project-card h2, .category-card h2 { margin-bottom: 10px; font-size: 1.4rem; }
 .organization-card p, .project-card p, .category-card p { color: var(--muted); }
 
-/* Organizations */
-.organization-card-content { position: relative; display: flex; flex-direction: column; flex: 1; padding: 0 28px 30px; }
-.organization-logo {
-  position: relative; z-index: 2;
-  display: block; width: 152px; height: auto; margin: -34px 0 20px;
-  border-radius: 12px; border: 3px solid #fff; box-shadow: var(--shadow);
-}
-.organization-card-content p { margin: 5; }
-
 /* Projects */
 .project-card-content { display: flex; flex-direction: column; flex: 1; padding: 26px 28px 24px; }
 .tag {
@@ -684,4 +675,3 @@ p { margin: 0 0 1em; }
     transform: none;
   }
 }
-  
