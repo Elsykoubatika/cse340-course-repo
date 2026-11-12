@@ -1,8 +1,15 @@
+```ejs
 <%- include('partials/header') %>
+
 <main id="main">
   <section class="page-hero">
     <div class="container">
-      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span aria-current="page"><%= title %></span></nav>
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span aria-hidden="true">/</span>
+        <span aria-current="page"><%= title %></span>
+      </nav>
+
       <div class="page-intro">
         <p class="eyebrow">Working together</p>
         <h1><%= title %></h1>
@@ -10,33 +17,26 @@
       </div>
     </div>
   </section>
+
   <section class="container page-body">
     <div class="organization-grid">
-      <article class="organization-card">
-        <div class="card-media"><img class="card-image" src="/images/reading-support.png" alt="Young people learning together" loading="lazy" decoding="async"></div>
-        <div class="organization-card-content">
-          <img class="organization-logo" src="/images/brightfuture.svg" alt="Bright Future logo" loading="lazy">
-          <h2>Bright Future</h2>
-          <p>Supports learning opportunities and educational resources for young people.</p>
-        </div>
-      </article>
-      <article class="organization-card">
-        <div class="card-media"><img class="card-image" src="/images/green-harvest-garden.png" alt="Plants growing in a community garden" loading="lazy" decoding="async"></div>
-        <div class="organization-card-content">
-          <img class="organization-logo" src="/images/greenharvest.svg" alt="Green Harvest logo" loading="lazy">
-          <h2>Green Harvest</h2>
-          <p>Promotes environmental awareness, clean-up activities, and community gardens.</p>
-        </div>
-      </article>
-      <article class="organization-card">
-        <div class="card-media"><img class="card-image" src="/images/community-service.png" alt="Volunteers working together on a community project" loading="lazy" decoding="async"></div>
-        <div class="organization-card-content">
-          <img class="organization-logo" src="/images/unityserve.svg" alt="Unity Serve logo" loading="lazy">
-          <h2>Unity Serve</h2>
-          <p>Connects volunteers with practical projects that strengthen neighborhoods.</p>
-        </div>
-      </article>
+
+      <% organizations.forEach(organization => { %>
+        <article class="organization-card">
+          <div class="card-media"><img class="card-image" src="/images/<%= organization.image_filename %>" alt="Plants growing in a community garden" loading="lazy" decoding="async"></div>
+          <div class="organization-card-conten">
+            <img class="organization-logo" src="/images/<%= organization.logo_filename %>" alt="<%= organization.name %>" loading="lazy" decoding="async">
+            <h2><%= organization.name %></h2>
+            <p><%= organization.description %></p>
+            <p><a href="mailto:<%= organization.contact_email %>"> <%= organization.contact_email %> </a> </p>
+          </div>
+
+        </article>
+      <% }); %>
+
     </div>
   </section>
 </main>
+
 <%- include('partials/footer') %>
+```

@@ -6,6 +6,7 @@ import dotenv from 'dotenv' ;
 dotenv.config();
 
 import { testConnection } from './src/models/db.js';
+import { getAllCategories } from './src/models/categories.js';
 
 dotenv.config();
 
@@ -28,8 +29,10 @@ app.get('/', async (req, res) => {
 
 // Organizations route
 app.get('/organizations', async (req, res) => {
-  const title = 'Our Partner Organizations';
-  res.render('organizations', { title });
+    const organizations = await getAllOrganizations();
+
+    const title = 'Our Partner Organizations';
+    res.render('organizations', { title, organizations });
 });
 
 // Service projects route
@@ -40,9 +43,16 @@ app.get('/projects', async (req, res) => {
 
 // Categories route
 app.get('/categories', async (req, res) => {
-  const title = 'Service Project Categories';
-  res.render('categories', { title });
+    const categories = await getAllCategories();
+
+    const title = 'Our Service Project Categories';
+
+    res.render('categories', {
+        title,
+        categories
+    });
 });
+
 
 // 404 route
 app.use((req, res) => {
@@ -64,12 +74,4 @@ app.listen(PORT, async () => {
     } catch (error) {
         console.error('Error connecting to the database:', error);
     }
-});
-
-app.get('/organizations', async (req, res) => {
-    const organizations = await getAllOrganizations();
-    console.log(organizations);
-      
-    const title = 'Our Partner Organizations';
-    res.render('organizations', { title });
 });
