@@ -24,7 +24,7 @@
       <% organizations.forEach(organization => { %>
         <article class="organization-card">
           <div class="card-media"><img class="card-image" src="/images/<%= organization.image_filename %>" alt="Plants growing in a community garden" loading="lazy" decoding="async"></div>
-          <div class="organization-card-conten">
+          <div class="organization-card-content">
             <img class="organization-logo" src="/images/<%= organization.logo_filename %>" alt="<%= organization.name %>" loading="lazy" decoding="async">
             <h2><%= organization.name %></h2>
             <p><%= organization.description %></p>
